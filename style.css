@@ -34,6 +34,9 @@ body {
 #logo {
   width: 5rem;
 }
+p {
+  font-size: var(--header-3);
+}
 
 header {
   display: flex;
@@ -59,10 +62,6 @@ header span,
   color: var(--header-color);
 }
 
-header span,
-#about h5 {
-  color: var(--header-color);
-}
 header nav {
   display: flex;
   margin-left: auto;
@@ -73,6 +72,26 @@ header nav a {
   color: var(--text-color);
   text-decoration: none;
   font-size: var(--header-3);
+  position: relative;
+  transition: 0.3s;
+}
+
+header nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+header nav a:hover::before {
+  transform: scaleX(1);
 }
 
 #home {
@@ -91,6 +110,7 @@ header nav a {
 }
 
 #home .home-content {
+  margin-top: 150px;
   padding-top: 100px;
 }
 
@@ -113,6 +133,7 @@ header nav a {
   font-size: var(--header-3);
   font-weight: bold;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 #home .phone-num {
@@ -131,15 +152,14 @@ header nav a {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: var(--glowing-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.3s;
-  z-index: -1;
 }
 
-#home .phone-num :hover {
+#home .phone-num:hover::before {
   transform: scaleX(1);
 }
 
@@ -149,6 +169,16 @@ header nav a {
 #contact h2 {
   margin-bottom: 30px;
   text-align: center;
+}
+
+#about,
+#services,
+#projects {
+  padding-top: 100px;
+}
+
+#about h5 {
+  color: var(--header-color);
 }
 
 #about .about p {
@@ -170,19 +200,20 @@ header nav a {
   margin: 20px;
   border-radius: 10px;
   background-color: var(--bg-color);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 #about .box:hover,
 #services .box-icon:hover,
 #projects .card:hover,
-#contact form {
+#contact form:hover {
   box-shadow: 5px 5px chartreuse;
 }
 
 #about h3 {
   color: var(--glowing-color);
   text-align: center;
+  margin: 30px;
 }
 #about .box h3 {
   color: var(--glowing-color);
@@ -191,12 +222,15 @@ header nav a {
 
 #services,
 #projects {
-  margin-top: 80px;
+  margin: 100px 0;
+  padding: 100px 50px;
 }
 
-#services h3 {
+#services h3,
+#projects h3 {
   color: var(--glowing-color);
   text-align: center;
+  margin: 50px;
 }
 
 #services .row {
@@ -210,7 +244,8 @@ header nav a {
   margin: 20px;
   border-radius: 10px;
   background-color: var(--bg-color);
-  transition: 0.3s;
+  transition: 0.5s;
+  position: relative;
   gap: 2rem;
 }
 
@@ -219,6 +254,7 @@ header nav a {
 }
 
 #services .box-icon h3 {
+  margin: 10px 0;
   text-align: left;
 }
 
@@ -226,29 +262,21 @@ header nav a {
 #projects .card a {
   text-decoration: none;
   color: var(--header-color);
-  transition: 0.2s;
+  font-size: var(--header-3);
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: flex-start;
+  transition: 0.3s;
 }
 
-#services .box-icon a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--header-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.2s;
-  z-index: -1;
-}
-
-#services .box-icon a:hover {
-  transform: scaleX(1);
+#services .box-icon a:hover,
+#projects .card a:hover {
+  color: var(--glowing-color);
+  border: 2px solid chartreuse;
 }
 
 #projects .row {
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -256,22 +284,25 @@ header nav a {
 
 #projects .card img {
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
 
 #projects .card {
-  width: 25rem;
+  width: 35rem;
   padding-top: 5px;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: 0.5s;
 }
 
 #projects .card h5 {
   color: var(--glowing-color);
+  font-size: var(--header-2);
 }
 
 #contact {
-  margin: 50px 0;
+  margin: 100px 0;
+  padding: 100px 50px;
 }
 
 #contact h2 {
@@ -292,35 +323,55 @@ header nav a {
   text-align: center;
 }
 
+#contact form .half-width {
+  display: flex;
+}
+
 #contact input,
 textarea {
   display: block;
   width: 100%;
-  margin: 5px;
+  margin: 10px;
   padding: 15px;
   border-radius: 10px;
 }
 
 #contact input:hover,
-textarea:hover {
-  border: 3px solid chartreuse;
+textarea:hover,
+#contact input:focus,
+textarea:focus {
+  background-color: rgba(243, 247, 241, 0.884);
 }
 
 #contact h4 {
   margin-bottom: 15px;
 }
+
 #contact .button {
   width: 25%;
-  align-self: center;
+  margin-top: 50px;
 }
+
+#contact .button:hover {
+  background-color: var(--glowing-color);
+}
+
 #contact .contacts {
   text-align: center;
   gap: 2rem;
 }
 
-#contact i {
-  font-size: var(--header-2);
+#contact .soc-med i {
+  font-size: var(--header-1);
   margin: 15px;
+}
+
+#contact .soc-med i:hover {
+  color: var(--text-color);
+}
+
+#contact .smaller-icon i {
+  font-size: var(--header-3);
 }
 
 #contact .contacts h4 {
@@ -328,7 +379,7 @@ textarea:hover {
 }
 
 #contact .contacts p {
-  font-size: var(--header-2);
+  font-size: var(--header-3);
 }
 
 footer {

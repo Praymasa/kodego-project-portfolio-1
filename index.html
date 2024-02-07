@@ -7,15 +7,16 @@
     <!-- myLinks -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./responsive.css" />
-    <link rel="stylesheet" href="./script.js" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <!-- for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <!-- forStyle -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -58,21 +59,26 @@
           />
         </div>
         <div class="col-sm-6 home-content">
-          <h1>
+          <h1 data-aos="fade-up">
             <b
-              >FREELANCE <span>FRONT-END WEB DEVELOPER</span> and
+              >FREELANCE <span>FULL-STACK WEB DEVELOPER</span> and
               <span>DESIGNER</span></b
             >
           </h1>
           <br /><br /><br />
-          <h3>
+          <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             I am <span>Princess Ymasa</span>, and I skillfully combines
             creativity, functionality, and efficiency to create seamless,
             user-friendly, and visually captivating online experiences for
             users.
           </h3>
           <br /><br /><br />
-          <div class="home-links">
+          <div
+            class="home-links"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <a href="#projects">Explore My Work</a>
             <a class="phone-num">Call: 0994-891-5602</a>
           </div>
@@ -112,7 +118,7 @@
       </div>
       <div class="row">
         <h3>Skills and Experiences</h3>
-        <div class="col-sm-3 box">
+        <div class="col-sm-3 box" data-aos="fade-up-right">
           <h3>Lead Generation</h3>
           <h5>2019 - up to present</h5>
           <br />
@@ -124,7 +130,7 @@
             insights for the client.
           </p>
         </div>
-        <div class="col-sm-3 box">
+        <div class="col-sm-3 box" data-aos="flip-left">
           <h3>Sales and Marketing</h3>
           <h5>6 years of Exprience</h5>
           <br />
@@ -135,7 +141,7 @@
             a remarkable ability to thrive in the fast-paced retail environment.
           </p>
         </div>
-        <div class="col-sm-3 box">
+        <div class="col-sm-3 box" data-aos="fade-up-left">
           <h3>Customer Service</h3>
           <h5>10 years of Exprience</h5>
           <br />
@@ -154,7 +160,7 @@
       <h2><b>SERVICES</b></h2>
       <h3>Services that I Provide</h3>
       <div class="row">
-        <div class="col-sm-3 box-icon">
+        <div class="col-sm-3 box-icon" data-aos="fade-right">
           <i class="bi bi-palette-fill"></i>
           <h3>UI/UX Designing</h3>
           <p>
@@ -163,7 +169,7 @@
           </p>
           <a href="">Learn more</a>
         </div>
-        <div class="col-sm-3 box-icon">
+        <div class="col-sm-3 box-icon" data-aos="fade-left">
           <i class="bi bi-code-square"></i>
           <h3>Front-End Development</h3>
           <p>
@@ -174,7 +180,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3 box-icon">
+        <div class="col-sm-3 box-icon" data-aos="fade-right">
           <i class="bi bi-safe2-fill"></i>
           <h3>Back-End Development</h3>
           <p>
@@ -183,7 +189,7 @@
           </p>
           <a href="">Learn more</a>
         </div>
-        <div class="col-sm-3 box-icon">
+        <div class="col-sm-3 box-icon" data-aos="fade-left">
           <i class="bi bi-pc-display-horizontal"></i>
           <h3>Full-Stack Development</h3>
           <p>
@@ -197,9 +203,13 @@
       </div>
     </section>
     <section id="projects">
-      <h2>PROJECTS</h2>
+      <h2><b>PROJECTS</b></h2>
+      <h3>
+        Here are some of my projects designing, building and maintaining a
+        website.
+      </h3>
       <div class="row">
-        <div class="card">
+        <div class="card" data-aos="zoom-out-left">
           <img src="./assets/e-com design.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">E-commerce</h5>
@@ -214,7 +224,7 @@
             >
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-out">
           <img
             src="./assets/mobile design.png"
             class="card-img-top"
@@ -233,7 +243,7 @@
             >
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-out-right">
           <img src="./assets/agency.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Management System</h5>
@@ -253,14 +263,20 @@
       </div>
     </section>
     <section id="contact">
-      <h2>Contact</h2>
+      <h2><b>CONTACT</b></h2>
       <div class="row">
         <div class="col-sm-6">
           <form>
             <h3>Inquire Now!</h3>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="tel" placeholder="Contact Number" />
+            <div class="half-width">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <div class="half-width">
+              <input type="email" placeholder="Email Address" />
+              <input type="tel" placeholder="Contact Number" />
+            </div>
+            <br />
             <textarea
               name=""
               id=""
@@ -272,7 +288,7 @@
           </form>
         </div>
         <div class="col-sm-6 contacts">
-          <div>
+          <div class="soc-med">
             <h4>Connect with Me</h4>
             <a href="https://www.linkedin.com/in/princessymasa"
               ><i class="bi bi-linkedin"></i
@@ -284,9 +300,18 @@
               ><i class="bi bi-instagram"></i
             ></a>
           </div>
-          <div class="mt-5">
-            <h4>You may also message/call me directly.</h4>
+          <div class="mt-5 smaller-icon">
+            <h4>Contact me directly</h4>
             <p><i class="bi bi-telephone-fill"></i> 0994-891-5602</p>
+          </div>
+          <div class="mt-5 smaller-icon">
+            <h4>Visit our Office</h4>
+            <p><i class="bi bi-geo-alt-fill"></i> St. Joseph Village</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Butong, Cabuyao</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Laguna,
+              Philippines
+            </p>
           </div>
         </div>
       </div>
@@ -295,6 +320,10 @@
       <p>© All Rights Reserve 2024 | KodeGo WD98 | Princess Ymasa</p>
     </footer>
     <!-- //Content -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
