@@ -175,7 +175,8 @@ header nav a {
 
 #about .box:hover,
 #services .box-icon:hover,
-#projects .card:hover {
+#projects .card:hover,
+#contact form {
   box-shadow: 5px 5px chartreuse;
 }
 
@@ -260,6 +261,7 @@ header nav a {
 
 #projects .card {
   width: 25rem;
+  padding-top: 5px;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -299,10 +301,18 @@ textarea {
   border-radius: 10px;
 }
 
+#contact input:hover,
+textarea:hover {
+  border: 3px solid chartreuse;
+}
+
 #contact h4 {
   margin-bottom: 15px;
 }
-
+#contact .button {
+  width: 25%;
+  align-self: center;
+}
 #contact .contacts {
   text-align: center;
   gap: 2rem;
