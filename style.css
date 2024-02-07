@@ -34,9 +34,6 @@ body {
 #logo {
   width: 5rem;
 }
-p {
-  font-size: var(--header-3);
-}
 
 header {
   display: flex;
@@ -45,20 +42,19 @@ header {
   position: relative;
   font-family: var(--body-font);
   background-color: hsl(240, 36%, 29%);
-  padding: 15px 30px;
+  padding: 0 30px;
   gap: 2rem;
 }
-header h1 {
-  font-size: var(--header-1);
+header h2 {
+  font-size: var(--header-2);
 }
 
 header span,
-#home h1,
 #about h2,
 #services h2,
 #projects h2,
 #contact h2 {
-  font-size: var(--header-1);
+  font-size: var(--header-2);
   color: var(--header-color);
 }
 
@@ -71,7 +67,6 @@ header nav {
 header nav a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: var(--header-3);
   position: relative;
   transition: 0.3s;
 }
@@ -114,6 +109,10 @@ header nav a:hover::before {
   padding-top: 100px;
 }
 
+#home h1 {
+  color: var(--header-color);
+}
+
 #home span,
 #about span {
   color: var(--glowing-color);
@@ -130,7 +129,6 @@ header nav a:hover::before {
   color: black;
   padding: 15px;
   text-decoration: none;
-  font-size: var(--header-3);
   font-weight: bold;
   border-radius: 10px;
   transition: 0.3s;
@@ -138,7 +136,6 @@ header nav a:hover::before {
 
 #home .phone-num {
   padding: 15px;
-  font-size: var(--header-3);
   font-weight: bold;
   color: var(--glowing-color);
   position: relative;
@@ -213,7 +210,6 @@ header nav a:hover::before {
 #about h3 {
   color: var(--glowing-color);
   text-align: center;
-  margin: 30px;
 }
 #about .box h3 {
   color: var(--glowing-color);
@@ -222,15 +218,14 @@ header nav a:hover::before {
 
 #services,
 #projects {
-  margin: 100px 0;
-  padding: 100px 50px;
+  margin: 80px 0;
+  padding: 80px 50px;
 }
 
 #services h3,
 #projects h3 {
   color: var(--glowing-color);
   text-align: center;
-  margin: 50px;
 }
 
 #services .row {
@@ -262,7 +257,6 @@ header nav a:hover::before {
 #projects .card a {
   text-decoration: none;
   color: var(--header-color);
-  font-size: var(--header-3);
   padding: 10px;
   border-radius: 8px;
   justify-content: flex-start;
@@ -297,12 +291,12 @@ header nav a:hover::before {
 
 #projects .card h5 {
   color: var(--glowing-color);
-  font-size: var(--header-2);
 }
 
 #contact {
-  margin: 100px 0;
-  padding: 100px 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 80px 50px;
 }
 
 #contact h2 {
@@ -316,6 +310,7 @@ header nav a:hover::before {
 }
 
 #contact form {
+  height: 500px;
   margin-left: 50px;
   padding: 25px;
   background-color: var(--bg-color);
@@ -331,8 +326,8 @@ header nav a:hover::before {
 textarea {
   display: block;
   width: 100%;
-  margin: 10px;
-  padding: 15px;
+  margin: 8px;
+  padding: 8px;
   border-radius: 10px;
 }
 
@@ -362,7 +357,7 @@ textarea:focus {
 }
 
 #contact .soc-med i {
-  font-size: var(--header-1);
+  font-size: var(--header-2);
   margin: 15px;
 }
 
@@ -371,15 +366,11 @@ textarea:focus {
 }
 
 #contact .smaller-icon i {
-  font-size: var(--header-3);
+  font-size: 1rem;
 }
 
 #contact .contacts h4 {
   color: var(--glowing-color);
-}
-
-#contact .contacts p {
-  font-size: var(--header-3);
 }
 
 footer {
