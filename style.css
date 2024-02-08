@@ -282,7 +282,7 @@ header nav a:hover::before {
 }
 
 #projects .card {
-  width: 35rem;
+  width: 25rem;
   padding-top: 5px;
   background-color: var(--bg-color);
   color: var(--text-color);
