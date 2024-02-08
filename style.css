@@ -175,7 +175,12 @@ header nav a:hover::before {
 }
 
 #about h5 {
-  color: var(--header-color);
+  display: inline;
+  padding: 5px;
+  margin-bottom: 50px;
+  color: hsl(240, 36%, 29%);
+  font-weight: bold;
+  background-color: rgba(204, 207, 207, 0.281);
 }
 
 #about .about p {
@@ -256,7 +261,7 @@ header nav a:hover::before {
 #services .box-icon a,
 #projects .card a {
   text-decoration: none;
-  color: var(--header-color);
+  color: var(--glowing-color);
   padding: 10px;
   border-radius: 8px;
   justify-content: flex-start;
@@ -265,7 +270,6 @@ header nav a:hover::before {
 
 #services .box-icon a:hover,
 #projects .card a:hover {
-  color: var(--glowing-color);
   border: 2px solid chartreuse;
 }
 
@@ -320,13 +324,14 @@ header nav a:hover::before {
 
 #contact form .half-width {
   display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 #contact input,
 textarea {
   display: block;
   width: 100%;
-  margin: 8px;
   padding: 8px;
   border-radius: 10px;
 }
